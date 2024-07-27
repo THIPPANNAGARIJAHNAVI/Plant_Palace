@@ -1,0 +1,1584 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color:darkolivegreen;">
+  <div class="container-fluid text-uppercase">
+
+    <img src="/home/student/Pictures/Screenshot from 2023-08-10 23-23-43.png" width="45px" class="rounded">
+    <a class="navbar-brand" href="#" style="font-style:oblique;text-shadow:2.5px 2.5px; color:white; font-size:32px;">PlantBazar</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+      <ul class="navbar-nav  ms-auto">
+        <marquee behavior="scroll" direction="right"  width="600px"style="color:paleturquoise;font-style:oblique;font-size:16px;" >FREE DELIVERY </marquee>
+        <li class="nav-item" >
+          <a class="nav-link " aria-current="page" href="#hello" style="color:white">Home</a>
+        </li>
+      
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" style="color:white" data-bs-toggle="dropdown" role="button">Categories</a>
+        
+         <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#decor">Plants for decor</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#indoor">Indoor plants</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#outdoor">Outdoor plants</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#airpure">Air purifying plants</a></li>
+  </ul>
+</li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about" style="color:white">About</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" href="#contact" style="color:white">Contact Us</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" href="#suggestion" data-bs-toggle="modal" data-bs-target="#modal2" style="color:white">suggestions</a>
+        </li>
+        
+      </ul>
+</div>
+         
+</nav>
+
+<div class="modal w-500" id="modal1"  >
+                <div class="modal-dialog">
+                    <div class="modal-content ">
+                        <div class="modal-body " style="background-color:papayawhip">
+                         <div class="modal-header">
+                            <h1 class="modal-title">Login</h1>
+					<button class="btn btn-danger" data-bs-dismiss="modal">X</button>
+                          </div>
+                            <form action="formhandle.php" method="post">
+                            <div class="mt-3">
+                                <label class="form-label" for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Full Name">
+                                 <small></small>
+                            </div>
+                            <div class="mt-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="mail" placeholder="ENter Email Address">
+                            <small></small>
+                            </div>
+                            
+                             <div class="mt-3">
+                                <label class="form-label" for="phone">Mobile Number</label>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="enter your mobile number" >
+                             <small></small>
+                            </div>
+                            <div class="mt-3">
+                              <label for="pin" class="form-label">Pin Code</label>
+                                <input type="text" class="form-control" id="pin"  name="pincode" >
+                                 <small>   </small>
+                            </div>
+                            <div class="mt-3">
+                            <label for="address" class="form-label">Address</label>
+                             <textarea class="form-control" id="address" rows="4" required="true" name="address"></textarea>
+                             </div>
+                            
+                            
+                                  
+                                <input type="submit" value="Submit" class="btn  w-100" name="submit" style="background-color:olive">
+                             </form>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+<div class="modal w-500" id="modal2"  >
+                <div class="modal-dialog">
+                    <div class="modal-content ">
+                        <div class="modal-body " style="background-color:papayawhip">
+                         <div class="modal-header">
+                            <h1 class="modal-title">Login</h1>
+					<button class="btn btn-danger" data-bs-dismiss="modal">X</button>
+                          </div>
+                            <form id="suggestion" method="post" action="end1.php" enctype="multipart/form-data" >
+                                  <div class="mb-3">
+                                     <label for="Feedback" class="form-label">Feedback</label>
+                                    <textarea class="form-control" id="feedback" rows="4"></textarea>
+                                  </div>
+                                  <div class="mb-3">
+                                   <p>If you have any plant requirements which are not present in our website you can upload those plant images       here                               so that we can try to provide them</p>
+                                  <label for="Fileupload" class="form-label">upload your file</label>
+                                  <input class="form-control" type="file"  name="file" id="Fileupload">
+                                   </div> 
+                            
+                                <input type="submit" value="Submit" class="btn  w-100" name="submit" style="background-color:olive">
+                             </form>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+             
+             
+<div class="image" id="hello">
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselCaptions" class="carousel slide">
+<div class="carousel-indicators">
+    <button type="button btn-primary" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+    </button>
+    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active" >
+      <img src="/home/student/Pictures/plants4.png" height="600" class="d-block w-100" alt="plant1">
+    </div>
+    <div class="carousel-item">
+      <img src="/home/student/Pictures/plant2.png" height="600" class="d-block w-100" alt="plant2">
+    </div>
+    <div class="carousel-item">
+      <img src="/home/student/Pictures/plant3.png" height="600" class="d-block w-100" alt="plant3">
+    </div>
+    <div class="carousel-item">
+      <img src="/home/student/Pictures/plant1.png" height="600" class="d-block w-100" alt="plant4">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+
+
+
+
+</div>
+<div style="background-color:aliceblue;">
+<h2 id="decor">Decoration plants</h2>
+<div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src=" /home/student/Downloads/decor.jpg" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Polyester Skyla Multicolor Croton Without Pot Artificial Plant</h6>
+   <br><p>cost:Rs.500</p>
+      <div class="card-footer">
+      <a href="#" class="btn btn-primary "data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+     </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src="/home/student/Pictures/decor2.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Plastic Green Wall Bush Without Pot Set Of 3 Artificial Plants </h6>
+    <br><p> cost:Rs.560</p>
+   <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1"  style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src="/home/student/Pictures/decor1.png" height="270"  class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Synthetic 3 Branched Bonsai Tree With  White Flowers With Pot</h6>
+<br><p>cost:Rs.450</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src="/home/student/Pictures/decor3.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Polyester And Plastic Green Pine Leaves & 4 Head Bonsai Tree With Pot </h6>
+   <p>cost:Rs.700</p>
+     <div class="card-footer">
+     <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src="/home/student/Pictures/decor4.png" height="270"  class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Fabric Multicolour Japanese Maple In A Ceramic Pot Artificial Plants </h6>
+    <p>cost:Rs.2409</p>
+     <div class="card-footer">
+     <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+     </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src="/home/student/Pictures/decor5.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Polyester Yellow & Orange Flowers Y Shaped Green With Pot</h6>
+<br> <p> cost:Rs.379 </p>
+  <div class="card-footer">
+  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+   </div>
+  </div>
+</div>
+</div>
+
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src="/home/student/Pictures/decor6.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title"> Plastic Small Red Leaves Bent With Pot Artificial Plants </h6>
+<br><p>cost:Rs.894</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src="/home/student/Pictures/decor7.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Plastic Green And Blend Green Leaves Mini Tree With Pot Artificial Plants </h6>
+    <p>cost:Rs.499</p>
+     <div class="card-footer">
+     <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+  
+
+
+<div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src=" /home/student/Pictures/decor9.jpg" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Best Artificial Flower Pots for Home Decor Artificial Flower Plant </h6>
+   <p>cost:Rs.497</p>
+      <div class="card-footer">
+      <a href="#" class="btn btn-primary "data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+     </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src="/home/student/Pictures/decor10.jpg" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Bamboo leaves plant (green) with wood hexagon pot (brown) </h6>
+    <br><p> cost:Rs.256</p>
+   <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1"  style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src="/home/student/Pictures/decor11.jpg" height="270"  class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Dekorly 2 Pcs Fake Plants for Bathroom/Home Office Decor</h6>
+<br><p>cost:Rs.560</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:470px;">
+  <img src="/home/student/Pictures/decora13.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Ikea Artificial Plants /Mini Succulents With Plastic Vase/Pot(white) </h6>
+   <p>cost:Rs.689</p>
+     <div class="card-footer">
+     <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<!--- indoor -->
+
+
+
+<h2 id="indoor">Indoor Plants</h2>
+<div class="container-fluid">
+  <div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:510px;">
+  <img src="/home/student/Downloads/indoor.jpg" height="190"  class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Ardesia Crenata</h6>
+   <p class="card-text">The leaves of Ardisia crenata are being investigated as a remedy to stop asthmatic contractions and spasms.</p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas1" role="button" >click here to know more about this plant
+</a>
+
+<p>cost:Rs.500</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:510px;">
+  <img src="/home/student/Downloads/indoor1.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Epipremnum Aureum</h6>
+   <p class="card-text">All the parts of the plant have various types of secondary metabolites which are having medicinal properties</p>
+ <a  data-bs-toggle="offcanvas" href="#offcanvas2" role="button" >click here to know more about this plant
+</a>
+<p> cost:Rs.350 </p>
+    <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:510px;">
+  <img src="/home/student/Downloads/indoor2.jpg" height="190"  class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Zamioculcas</h6>
+   <p class="card-text">The locals of Tanzania use the juice to treat earache and the leaves of this plant are also used to cure stomach ailments.</p> 
+<a  data-bs-toggle="offcanvas" href="#offcanvas3" role="button" >click here to know more about this plant
+</a>
+<p>cost:Rs.600</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:510px;">
+  <img src="/home/student/Downloads/indoor3.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">cypress</h6>
+    <p class="card-text"> The branch, cone, and oil are used for medicine. People use cypress for cough and the common cold.<br><br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas4" role="button" >click here to know more about this plant
+</a>
+ <p>cost:Rs.500</p>
+    <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+   </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/indoor4.jpeg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Birds Nest Fern</h6>
+    <p class="card-text">The leaves can also be pounded in water and used as a lotion to treat fever.<br><br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas5" role="button" >click here to know more about this plant
+</a> 
+   <p>cost:Rs.500</p>
+    <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+   </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/indoor6.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Arboricola Plant</h6>
+    <p class="card-text">Arboricola is commonly grown as a houseplant, popular for its tolerance of neglect and poor growing conditions.</p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas6" role="button" >click here to know more about this plant
+</a>
+  <p> cost:Rs.350 </p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/indoor5.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Croton</h6>
+    <p class="card-text">The seeds and oil extracted from the seeds are used to make medicine.<br><br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas7" role="button" >click here to know more about this plant
+</a>
+  <p>cost:Rs.600</p>
+   <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+</div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/zebra-plant-indoor-house-plant.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Zebra plant</h6>
+    <p class="card-text">  With beautifully-shaped pots, it is suitable for decorating tables, coffee tables, or window sills.<br><br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas8" role="button" >click here to know more about this plant
+</a>
+  <p>cost:Rs.500</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:510px;">
+  <img src="/home/student/Pictures/indoor9.jpg" height="190"  class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">TRADESCANTIA </h6>
+   <p class="card-text">An easy-to-grow, trailing plant that is great for beginners. Perfect for use in a hanging basket<br><br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas33" role="button" >click here to know more about this plant
+</a>
+
+<p>cost:Rs.396</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:510px;">
+  <img src="/home/student/Pictures/indoor9.webp" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">MONSTERA </h6>
+   <p class="card-text">this hardy houseplant is almost impossible to kill. Although it prefers bright light.<br><br></p>
+ <a  data-bs-toggle="offcanvas" href="#offcanvas34" role="button" >click here to know more about this plant
+</a>
+<p> cost:Rs.350 </p>
+    <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:510px;">
+  <img src="/home/student/Pictures/indoor10.webp" height="190"  class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">WATERMELON PEPEROMIA</h6>
+   <p class="card-text">Also known as Swiss cheese plant or split-leaf philodendron, this tropical beauty sports lush green leaves</p> 
+<a  data-bs-toggle="offcanvas" href="#offcanvas35" role="button" >click here to know more about this plant
+</a>
+<p>cost:Rs.600</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:510px;">
+  <img src="/home/student/Pictures/indoor11.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">POLKA DOT PLANT</h6>
+    <p class="card-text"> A charming little foliage plant with cheery pink speckles over deep-green leaves.<br><br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas36" role="button" >click here to know more about this plant
+</a>
+ <p>cost:Rs.490</p>
+    <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+   </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- outdoor plants-->
+<h2 id="outdoor">Outdoor plants</h2>
+<div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src=" /home/student/Pictures/outdoor.png" height="270"  class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Jasminum sambac, Mogra, Arabian Jasmine - Plant</h6>
+   <a  data-bs-toggle="offcanvas" href="#offcanvas9" role="button" >click here to know more about this plant
+</a>
+    <p>cost:<del>Rs.374</del>   299</p>
+    <div class="card-footer">
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/outdoor1.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Miniature Rose, Button Rose (Any Color) - Plant  </h6>
+   <a  data-bs-toggle="offcanvas" href="#offcanvas10" role="button" >click here to know more about this plant
+</a>
+    <p> cost:<del>Rs.348</del> 289</p>
+     <div class="card-footer">
+     <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+     </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/outdoor2.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Parijat Tree, Parijatak, Night Flowering Jasmine - Plant </h6>
+   <a  data-bs-toggle="offcanvas" href="#offcanvas11" role="button" >click here to know more about this plant
+</a>
+<p>Cost:<del>Rs.417</del> 359</p>
+    <div class="card-footer">
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/outdoor3.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Krishna Tulsi Plant, Holy Basil, Ocimum tenuiflorum (Black)</h6>
+  <a  data-bs-toggle="offcanvas" href="#offcanvas12" role="button" >click here to know more about this plant
+</a> 
+<p>cost:<del>Rs.294</del> 259</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+ </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/outdoor4.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Clitoria Ternatea, Gokarna (Blue) - Plant  </h6>
+   <a  data-bs-toggle="offcanvas" href="#offcanvas13" role="button" >click here to know more about this plant
+</a>
+    <p>Cost:<del>Rs.350</del> 319</p>
+     <div class="card-footer">
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+     </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/outdoor5.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Curry Leaves, Kadi Patta, Murraya koenigii, Meetha Neem - Plant </h6>
+   <a  data-bs-toggle="offcanvas" href="#offcanvas14" role="button" >click here to know more about this plant
+</a>
+ <p> cost:<del>Rs.408</del> 349 </p>
+   <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/outdoor6.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title"> Rose (Orange) - Plant </h6>
+   <br><a  data-bs-toggle="offcanvas" href="#offcanvas15" role="button" >click here to know more about this plant
+</a>
+<p>cost:<del>Rs.348</del> 299</p>
+   <div class="card-footer">
+   <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/outdoor7.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Orange Fruit, Santra - Plant </h6>
+   <br><a  data-bs-toggle="offcanvas" href="#offcanvas16" role="button" >click here to know more about this plant
+</a>
+    <p>cost:<del>Rs.594</del> 495</p>
+     <div class="card-footer">
+     <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+   </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/outdoor9.webp" height="270"  class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Ajuga </h6>
+   <a  data-bs-toggle="offcanvas" href="#offcanvas33" role="button" >click here to know more about this plant
+</a>
+    <p>cost:Rs.314</p>
+    <div class="card-footer">
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/outdoor10.webp" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Caladium  </h6>
+   <a  data-bs-toggle="offcanvas" href="#offcanvas34" role="button" >click here to know more about this plant
+</a>
+    <p> cost:Rs.289</p>
+     <div class="card-footer">
+     <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+     </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/outdoor11.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title"> First Frost Hosta  </h6>
+   <a  data-bs-toggle="offcanvas" href="#offcanvas35" role="button" >click here to know more about this plant
+</a>
+<p>Cost:389</p>
+    <div class="card-footer">
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/outdoor12.png" height="270" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Desert Rose </h6>
+  <a  data-bs-toggle="offcanvas" href="#offcanvas36" role="button" >click here to know more about this plant
+</a> 
+<p>cost:319</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+ </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<h2 id="airpure">Air Purifying Plants</h2>
+<div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/air1.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Mother In Law Tongue</h6>
+    <p class="card-text">Mother-in-law's tongue is an excellent air-purifying plant that removes harmful pollutants such as benzene, formaldehyde</p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas17" role="button" >click here to know more about this plant
+</a>
+<p>cost:Rs.500</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/airpure2.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Dracaena</h6>
+    <p class="card-text"> Dracaena is one of the indoor plants that help reduce indoor pollution levels,help beautify home interiors.<br><br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas18" role="button" >click here to know more about this plant
+</a>
+<p> cost:Rs.350 </p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+ </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/airpure3.jpg" height="190"  class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Peace Lily</h6>
+    <p class="card-text">The peace lily plant is well known for its air-purifying abilities as a houseplant<br><br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas19" role="button" >click here to know more about this plant
+</a>
+<p>cost:Rs.600</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/airpure4.jpg"  height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Cast Iron plant<h6>
+    <p class="card-text"> The plant has many health benefits and is a good air purifier.<br><br><br><br> </p>
+     <a  data-bs-toggle="offcanvas" href="#offcanvas20" role="button" >click here to know more about this plant
+</a>   
+    <p>cost:Rs.500</p>
+  <div class="card-footer">
+<a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+</div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/airpure5.jpg" height="190"  class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">English Ivy</h6>
+    <p class="card-text">As a houseplant, it may help to purify the air and provides antioxidant and anti-inflammatory benefits</p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas21" role="button" >click here to know more about this plant
+</a>
+    <p>cost:Rs.500</p>
+   <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+ </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/airpure6.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Spider plant</h6>
+    <p class="card-text"> The most important spider plant indoor benefit is its ability to filter and purify the air in your home<br><br></p>
+     <a  data-bs-toggle="offcanvas" href="#offcanvas22" role="button" >click here to know more about this plant
+</a>    
+   <p> cost:Rs.350 </p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/airpure7.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Aglaonema Plant</h6>
+    <p class="card-text"> The roots are used as a tonic for children and as anthelmintic,and also purifies the air.<br><br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas23" role="button" >click here to know more about this plant
+</a>   
+    <p>cost:Rs.600</p>
+   <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+  </div>
+ </div>
+  </div>
+</div>
+
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/airpure8.jpeg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Weeping fig</h6>
+    <p class="card-text"> It is also used for the treatment of inflammation, piles, vomiting, leprosy, malaria, nose diseases, and cancer. </p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas24" role="button" >click here to know more about this plant
+</a>
+   <p>cost:Rs.500</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Downloads/airpure9.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Snake Plant</h6>
+    <p class="card-text">It is the best air purifying plant and also brings in lots of fortune and wealth to your house.<br><br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas25" role="button" >click here to know more about this plant
+</a>
+   <p>cost:Rs.500</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+ </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/airpure10.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Corn Plant</h6>
+    <p class="card-text"> Dracaena fragrans is a slow growing shrub, usually multistemmed at the base, mature specimens reaching 15 m <br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas26" role="button" >click here to know more about this plant
+</a>
+   <p>cost:Rs.600</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+</div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/airpure11.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Lemon Button Fern</h6>
+    <p class="card-text">Nephrolepis Cordifolia or the Lemon Button Fern can effectively handle harmful air chemicals like xylene, toluene, and formaldehyde<br></p>
+     <a  data-bs-toggle="offcanvas" href="#offcanvas27" role="button" >click here to know more about this plant
+</a>  
+<p>cost:Rs.600</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/airpure12.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Dragon plant</h6>
+    <p class="card-text"> If you are looking for an interesting, colourful addition to your office or home, the dragon tree will be a perfect fit for you </p>
+   <a  data-bs-toggle="offcanvas" href="#offcanvas28" role="button" >click here to know more about this plant
+</a>  
+<p>cost:Rs.500</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="row mb-5">
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/airpure13.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Rubber Tree</h6>
+    <p class="card-text">They can naturally absorb high levels of carbon dioxide in the room air and convert them to oxygen</p>
+     <a  data-bs-toggle="offcanvas" href="#offcanvas29" role="button" >click here to know more about this plant
+</a>  
+<p>cost:Rs.800</p>
+  <div class="card-footer">
+<a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+</div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/airpure14.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Golden Pothos</h6>
+    <p class="card-text">This lant has been officially recognized in the NASA Clean Air Study for its air purification qualities.</p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas30" role="button" >click here to know more about this plant
+</a>  
+   <p> cost:Rs.350 </p>
+  <div class="card-footer"> 
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+</div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/airpure15.jpg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Philodendron</h6>
+    <p class="card-text"> The biggest advantage of this plant is its ability to fit into any home. <br><br></p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas31" role="button" >click here to know more about this plant
+</a>  
+   <p>cost:Rs.600</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;">Buy Now</a>
+</div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="width: 18rem;height:490px;">
+  <img src="/home/student/Pictures/airpure16.jpeg" height="190" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h6 class="card-title">Sword Fern</h6>
+    <p class="card-text"> The preferred habitat of this fern is the understory of moist coniferous woodlands at low elevations.</p>
+    <a  data-bs-toggle="offcanvas" href="#offcanvas32" role="button" >click here to know more about this plant
+</a>  
+   <p>cost:Rs.500</p>
+  <div class="card-footer">
+ <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="display:flex ; justify-content:center;" >Buy Now</a>
+ </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+<!---about us-->
+<div style="background-image:url('/home/student/Pictures/background.png'); background-repeat:no-repeat; background-attachment:scroll ; background-size:cover; padding:150px; padding-left:300px;"  id="about">
+<h1>ABOUT PLANT BAZAR</h1>
+<p>Having plants in our lives and in our homes is the most extraordinary thing ever. The second best thing is bragging about it on social  media.buying plants can be a hassle. Well, not anymore, a visit to your local nursery isn't required at all! PlantBazar is an online nursery, now, your plants are a click away With so many offerings and many new varieties added every week. </p>
+<p>Plants can become a great gift option too and  we make ordering these beautiful gift items for you absolutely easy. Pick from the wide collection of terrariums, succulents, ferns, adeniums, orchids or even cacti. You can Order these little greens for your loved ones online with us and PlantBazar  team will do the needful.Plants and seeds delivery available to all areas. Now send any plants online to cities like Delhi, Kolkata, Hyderabad , Chennai , Mumbai , Bangalore , Ahmedabad , or any other destination with few mouse clicks.  </p>
+               
+ <p> A little piece of nature is what everyone wants, we understand that and  we strive to make that private garden dream a reality.</p>
+<div style="padding-left:150px;">
+<h2>Features</h2>
+<ul type="disc">
+<li>Free Delivery</li>
+<li>User-Friendly interface</li>
+<li>Responsive Design</li>
+<li>100 rupees discount on first order</li>
+</ul>
+
+<h2>Terms&Conditions</h2>
+<ul type="circle">
+<li>No return policy</li>
+</ul>
+
+</div>
+</div>
+<div style="background-image:url('/home/student/Pictures/contactus3.png'); background-repeat:no-repeat; background-attachment:scroll ; background-size:100% 100%; padding:150px; padding-left:200px; font-style:oblique; font-size:26px; " id="contact" >
+<h1 color="blue"  >contact us</h1>
+NAME:Thippannagari Jahnavi</br>
+Email Id:jahnavithippannagari362@gmail.com</br>
+Mobile Number:7095474872</br>
+Follow us on:
+<i class="fa fa-facebook"></i>&nbsp;&nbsp;
+<i class="fa fa-instagram"></i>&nbsp;&nbsp;
+<i class="fa fa-twitter-square"></i>&nbsp;&nbsp;
+<i class="fa fa-whatsapp"></i>&nbsp;&nbsp;
+<i class="fa fa-youtube-play"></i>
+<br>
+</div>
+
+<!---offcanvas for specific plants--->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas1" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Ardesia Creneta</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">It is known by a variety of names such as Christmas berry, Australian holly, coral ardisia, coral bush, coralberry, coralberry tree, hen's-eyes, and spiceberry.
+<p>Christmas berry is an upright perennial shrub that grows 1.5–6 feet (0.46–1.83 m) tall. It maintains a densely-tufted growth pattern and is often multi-trunked. Christmas berry prefers moist soil and germination can occur from pH 4 to pH 10. It does well in temperatures of 25 °C and above. Germination rates are as high as 97.79% after 40 days.</p>
+<p> Its leaves are simple, alternate and measure up to 8 inches long. They are waxy and dark green with a crenate margin containing small calluses within the ridges. The leaf tips are acuminate and their petioles are 3–10 mm long. They have a central vein with up to 18 pairs of side veins.Flowers are white or pink with yellow anthers and grow in axillary clusters and are very often covered in multiple black spots.</p>
+<p> Plants begin to bear fruit two years after sprouting. Christmas berry has an abundance of spherical, 1-seeded red berries of about 0.25 inches in diameter that remain on the plant throughout the year.The berry clusters often droop below the glossy foliage.Berries are consumed by birds and, when present, raccoons, and subsequently excreted; seeds can also be distributed by water flow transport.</p>
+<p>While there are indications the plant may be poisonous to livestock, pets and humans, due to cattle deaths in Florida, there is no scientific confirmation of this.</p>
+    
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas2" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Epipremnum Aureum</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">The plant has a number of common names including golden pothos, Ceylon creeper,hunter's robe, ivy arum, house plant, silver vine, Solomon Islands ivy, and taro vine. It is also called devil's vine or devil's ivy because it is almost impossible to kill and it stays green even when kept in the dark. It is sometimes mistakenly labeled as a Philodendron, Pothos or Scindapsus in plant stores. It is commonly known as a money plant in many parts of the Indian subcontinent. It rarely flowers without artificial hormone supplements; the last known spontaneous flowering in cultivation was reported in 1964.
+<p>The plant has gained the Royal Horticultural Society's Award of Garden Merit.
+Epipremnum aureum is an evergreen vine growing to 20 m (66 ft) tall, with stems up to 4 cm (2 in) in diameter, climbing using aerial roots which adhere to surfaces. The leaves are alternate, heart-shaped, entire on juvenile plants, but irregularly pinnatifid on mature plants, up to 100 cm (39 in) long and 45 cm (18 in) broad; juvenile leaves are much smaller, typically under 20 cm (8 in) long.</p>
+<P>The flowers are produced in a spathe up to 23 cm (9 in) long. This plant produces trailing stems when it climbs up trees and these take root when they reach the ground and grow along with it. The leaves on these trailing stems grow up to 10 cm (4 in) long and are the ones normally seen on this plant when it is cultivated as a potted plant.</p>
+
+    
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas3" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Zamioculcas</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">The roots of the plants are rhizomatous and have the ability to store moisture, thus aiding the plants in their drought resistance. For this reason, the plant should be watered only when it is dry, to avoid overwatering. A commonly-held notion among gardeners is “If you water the ZZ plant more than you pay your rent, it’s too much” (I.e.; once a month, possibly twice, watering is more than sufficient).
+<p> They also require superior drainage, with lots of chunky, rocky and inert materials mixed into their soil. They’re known to survive in relatively dark, indoor areas of homes and buildings, and can live in full shade to indirect sunlight. However, lower light is not optimal in most cases; insufficient amounts of sunlight can result in leaves lengthening and/or falling off, yellowing (chlorosis), and generally uneven or disproportionate growth (as the plant stretches towards a light source).</p>
+<p>It is a herbaceous perennial growing to 45–60 centimetres (18–24 in) tall, from a stout underground, succulent rhizome. It is normally evergreen, but becomes deciduous during drought, surviving drought due to the large potato-like rhizome that stores water until rainfall resumes. The leaves are pinnate, 40–60 cm (16–24 in) long, with 6–8 pairs of leaflets 7–15 cm (3–6 in) long; they are smooth, shiny, and dark green. The stems of these pinnate leaves are thickened at the bottom.</p>
+
+<p>The flowers are produced in a small bright yellow to brown or bronze spadix 5–7 cm (2–3 in) long, partly hidden among the leaf bases; flowering is from mid summer to early autumn.</p>
+
+<p>Zamioculcas zamiifolia contains an unusually high water contents of leaves (91%) and petioles (95%) and has an individual leaf longevity of at least six months, which may be the reason it can survive extremely well under interior low light levels for four months without water.</p>
+    
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas4" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">cypress</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Cupressus is one of several genera of evergreen conifers within the family Cupressaceae that have the common name cypress; for the others, see cypress. It is considered a polyphyletic group. Based on genetic and morphological analysis, the genus Cupressus is found in the subfamily Cupressoideae. The common name "cypress" comes via the Old French cipres from the Latin cyparissus, which is the latinisation of the Greek κυπάρισσος (kypárissos).
+    <p>Cypress are evergreen trees or large shrubs, growing to 5–40 m tall. The leaves are scale-like, 2–6 mm long, arranged in opposite decussate pairs, and persist for three to five years. On young plants up to two years old, the leaves are needle-like and 5–15 mm long. The cones are 8–40 mm long, globose or ovoid with four to 14 scales arranged in opposite decussate pairs; they are mature in 18–24 months from pollination. The seeds are small, 4–7 mm long, with two narrow wings, one along each side of the seed.</p>
+
+<p>Many of the species are adapted to forest fires, holding their seeds for many years in closed cones until the parent trees are killed by a fire; the seeds are then released to colonise the bare, burnt ground. In other species, the cones open at maturity to release the seeds. </p>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas5" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Birds Nest Fern</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Asplenium nidus is an epiphytic species of fern in the family Aspleniaceae, native to tropical southeastern Asia, eastern Australia, Hawaii (ʻēkaha in Hawaiian),Polynesia, Christmas Island, India, and eastern Africa. It is known by the common names bird's-nest fern (a name shared by some other aspleniums) or simply nest fern.
+<p>Asplenium nidus forms large simple fronds visually similar to banana leaves, with the fronds growing to 50–150 centimetres (20–59 in) long and 10–20 centimetres (3.9–7.9 in) broad, with occasional individuals up to 6.6 feet (two meters) in length by up to two feet (61 centimeters) width [9] They are light green, often crinkled, with a black midrib, and exhibit circinate vernation. Spores develop in sori on the underside of the fronds. These sori form long rows extending out from the midrib on the back of the outer part of the lamina (frond). The fronds roll back as they brown and create a massive leaf nest in the branches and trunks of trees. </p>
+    
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas6" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Arboricola Plant</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">It is an evergreen shrub growing to 8–9 m tall, free-standing, or clinging to the trunks of other trees as an epiphyte. The leaves are palmately compound, with 7–9 leaflets, the leaflets 9–20 cm long and 4–10 cm broad (though often smaller in cultivation) with a wedge-shaped base, entire margin, and an obtuse or acute apex, sometimes emarginate.The leaves are leathery in texture, shiny green, glabrous on the upper surface and somewhat lighter and matte on the underside. Young plants have smaller leaves and fewer leaflets. Each leaflet has a central rib that divides it into two halves, with between four and six ribs clearly visible up to the third order. The stipules merge with the petiole, the length of which is 12-15 cm.
+    <h6>flowers</h6>
+<p>Appearing from midsummer to early autumn, the flowers are produced in a 20 cm panicle of small umbels, each umbel 7–10 mm in diameter with 5–10 flowers. The flowers are hermaphroditic, having a colour ranging from yellow to green and a double perianth radial symmetry. They are composed of an entire annular calyx, five almost fully developed sepals, a corolla with five petals 2.5 mm long, with five stamens and five or six carpels that enclose the ovary. The style is not recognizable and the stigma is established.</p>
+<h6>Fruits</h6>
+<p>The fruits have an almost spherical oval drupe, with a diameter of about 5 mm. The endocarp contains five seeds. The fruits ripen from late summer to early winter. They begin as orange glandular points. At maturity, they become red-violet. The fruits are inedible to humans, but may be consumed (and spread elsewhere) by various birds, parrots or other animals.</p>
+
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas7" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Croton</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Croton is an extensive plant genus in the spurge family, Euphorbiaceae. The plants of this genus were described and introduced to Europeans by Georg Eberhard Rumphius. The common names for this genus are rushfoil and croton, but the latter also refers to Codiaeum variegatum. The generic name comes from the Greek κρότος (krótos), which means "tick" and refers to the shape of the seeds of certain species.
+<p>Croton is a diverse and complex taxonomic group of plants ranging from herbs and shrubs to trees.[3] A well-known member of this genus is Croton tiglium, a shrub native to Southeast Asia. It was first mentioned in European literature by Cristóbal Acosta in 1578 as "lignum pavanae". The oil, used in herbal medicine as a violent purgative, is extracted from its seeds. Currently, it is considered unsafe and it is no longer listed in the pharmacopeias of many countries.</p>
+    
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas8" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Zebra plant</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Aphelandra squarrosa (commonly but ambiguously called "zebra plant") is a plant species in the family Acanthaceae, which is native to Atlantic Forest vegetation of Brazil. This plant is often used as a house plant. This plant is cited in Flora Brasiliensis by Carl Friedrich Philipp von Martius. 
+<p>This plant flourishes in abundant, but not direct, light. It does not bloom often, but it can be encouraged to bloom by prolonged daily exposure to light. It is also very sensitive to moisture content; too much or too little water will cause the lower leaves to brown and fall off. It likes to be kept moist, but not wet. On average, it needs frequent, small amounts of water, as opposed to an occasional, thorough watering.
+
+The plant flourishes when the temperature is in the range of 18-21 °C (65-70 °F); and will suffer if the temperature drops below 15 °C (60 °F) for prolonged periods. </p>
+    
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas33" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">TRADESCANTIA </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Tradescantia (/ˌtrædəˈskæntiə/[4]) is a genus of 85 species of herbaceous perennial wildflowers in the family Commelinaceae, native to the Americas from southern Canada to northern Argentina, including the West Indies. Members of the genus are known by many common names, including inchplant, wandering jew, spiderwort, dayflower and trad.
+<p>Tradescantia grow 30–60 cm tall (1–2 ft), and are commonly found individually or in clumps in wooded areas and open fields. They were introduced into Europe as ornamental plants in the 17th century and are now grown in many parts of the world. Some species have become naturalized in regions of Europe, Asia, Africa, and Australia, and on some oceanic islands.</p>
+<p>Tradescantia are herbaceous perennials and include both climbing and trailing species, reaching 30–60 centimetres (0.98–1.97 ft) in height. The leaves are long, thin and blade-like to lanceolate, from 3–45 cm long (1.2–17.7 in). The flowers can be white, pink, purple or blue, with three petals and six yellow anthers (or rarely, four petals and eight anthers). The sap is mucilaginous and clear.
+
+A number of species have flowers that last for only a day, opening in the morning and closing by the evening.</p>
+<h6>etymology</h6><br>
+<p>The scientific name of the genus chosen by Carl Linnaeus honours the English naturalists and explorers John Tradescant the Elder (c. 1570s – 1638) and John Tradescant the Younger (1608–1662),[12][13] who introduced many new plants to English gardens. Tradescant the Younger mounted three expeditions to the new colony of Virginia.[14] From there the type species, Tradescantia virginiana, was brought to England in 1629. </p>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas34" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">MONSTERA </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Monstera deliciosa, the Swiss cheese plant or split-leaf philodendron is a species of flowering plant native to tropical forests of southern Mexico, south to Panama. It has been introduced to many tropical areas, and has become a mildly invasive species in Hawaii, Seychelles, Ascension Island and the Society Islands. It is very widely grown in temperate zones as a houseplant. 
+<p>The specific epithet deliciosa means "delicious", referring to the edible fruit. The genus Monstera is named from the Latin word for "monstrous" or "abnormal", and refers to the unusual leaves with natural holes that members of the genus have.</p>
+<p>Its popular name as a houseplant of "Swiss cheese plant", or just "cheese plant", is commonly stated to refer to the "eyes" or holes which develop in its leaves similar to the holes in some Swiss-type cheeses such as Emmental cheese. </p>
+<h6>Fruits</h6>
+<p>The fruit of Monstera deliciosa is up to 25 cm (10 in) long and 3–5 cm (1.2–2.0 in) diameter, and it looks like a green ear of maize covered with hexagonal scales. As the fruit ripens, these scales or platelets fall off the fruit, releasing a strong and sweet scent. The smell has been compared to a combination of pineapples and bananas.[16] The fruit is edible and safe for humans.</p>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas35" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">WATERMELON PEPEROMIA</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Peperomia argyreia, the watermelon peperomia, is a species of flowering plant in the family Piperaceae, native to northern South America, including Bolivia, Brazil, Ecuador, and Venezuela. The plant is not closely related to either watermelons or begonias. These terms relate to the shape, markings and texture of the leaves. Growing to 20 cm (7.9 in) tall and broad, it is a perennial with asymmetrical oval green leaves, slightly fleshy, strikingly marked with curved silver stripes, and red stems. Tiny green flower spikes appear in summer. 
+<p>The Latin specific epithet argyreia means “silvery”</p>
+<p>This decorative plant is valued in cultivation, and in temperate areas is generally grown as a houseplant at a minimum temperature of 10 °C (50 °F), in bright light but not direct sun. It has gained the Royal Horticultural Society’s Award of Garden Merit.</p>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas36" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">POLKA DOT PLANT</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Hypoestes phyllostachya, the polka dot plant, is a species of flowering plant in the family Acanthaceae, native to South Africa, Madagascar, and south east Asia. The spots often merge into larger areas of colour.
+<p>The genus name Hypoestes comes from the Greek hypo, meaning "under", and estia meaning "a house"; this refers to the calyxes being covered by bracts. The Latin specific epithet phyllostachya means "with a leaf spike".</p>
+<p>Growing to 30 cm (12 in) tall and broad, it is an evergreen shrub with leaves heavily-spotted pink or white, as if sprayed with paint. This small shrub with green foliage stained with pink-purple dots forms bushy and compact tufts. The leaves are opposite, oval and pointed. They are borne by petioles of 2 to 4 cm 1. The most common type has green leaves with pink spots, although it can range from white to any shade of pink to red. The spots on the undersides of the leaves are far lighter in color, often white. </p>
+<p>It may produce small, solitary pink/purple flowers at the nodes that resemble honeysuckle. The small flowers form on the cob at the end of the stems and are pink/purple. The fruit is a many-seeded dehiscent capsule. </p>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- offcanvas for outdoor plants-->
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas9" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Jasminum sambac, Mogra, Arabian Jasmine - Plant</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Jasmine (taxonomic name: Jasminum; /ˈjæsmɪnəm/, YASS-min-əm) is a genus of shrubs and vines in the olive family of Oleaceae.: 193  It contains around 200 species native to tropical and warm temperate regions of Eurasia, Africa, and Oceania. 194  Jasmines are widely cultivated for the characteristic fragrance of their flowers. A number of unrelated plants contain the word "jasmine" in their common names (see Other plants called "jasmine"). 
+<p>Jasmine can be either deciduous (leaves falling in autumn) or evergreen (green all year round), and can be erect, spreading, or climbing shrubs and vines. Their leaves are borne in opposing or alternating arrangement and can be of simple, trifoliate, or pinnate formation.</p>
+<h6>Flowers</h6>
+<p>The flowers are typically around 2.5 cm (0.98 in) in diameter. They are white or yellow, although in rare instances they can be slightly reddish. The flowers are borne in cymose clusters with a minimum of three flowers, though they can also be solitary on the ends of branchlets. Each flower has about four to nine petals, two locules, and one to four ovules. They have two stamens with very short filaments. The bracts are linear or ovate. The calyx is bell-shaped. They are usually very fragrant</p>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas10" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Button Rose</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Button Rose is a flowering shrub plant species of genus Rosa in the family rosaceae, roses are one of the most cultivated flowering plants which are mostly native to Asia. ⁣
+⁣
+Rose flowers are extremely fragrant by own unless that the species developed for large and multi shade blooms for commercial cultivation.⁣
+⁣
+The fragrance of Rose flowers depends on its variety and climatic conditions, hence this plant may or may not produce fragrant flowers. Miniature roses are miniature versions of Hybrid Tea roses. ⁣
+⁣
+This roses are extremely hardy and versatile plants. The pink rose is considered as a symbol of sweetness, admiration, sympathy, femininity, grace.
+    
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas11" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Parijat tree</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">The Parijaat tree is a sacred baobab tree in the village of Kintoor, near Barabanki, Uttar Pradesh, India, about which there are several legends.
+<p>It is a protected tree situated in Barabanki district of Uttar Pradesh, India. By the order of local district magistrate, any kind of damage to the tree is strictly prohibited. The tree is known as baobab in modern science which is originated in Sub-sahara Africa and hence its presence in the fertile land of India makes it rare. Also the age of the tree is still not determined, which makes it quite possible that the tree may have been planted by someone who used to travel between India and Africa. The tree needs international attention of scientists to find out more about it. The tree is also known as 'the tree from paradise' due to its mythological significance.</p>
+<h6>History</h6>
+<p>There are a number of legends about this tree which have popular acceptance. One being that Arjun brought this tree from heavens and Kunti used to offer and crown Lord Shiva with its flowers. Another saying being, that Lord Krishna brought this tree for his beloved queen Satyabhama or Rukmini. Historically, though these saying may have some bearing or not, but it is true that this tree is from a very ancient background</p>
+</p>
+<p>According to the Harivansh Puraan the Parijaat Tree is a Kalpavriksha, or wish bearing tree, which, apart from this tree, is only found in heaven. Newly-weds visit the tree for blessings, and every Tuesday a fair is held where local people worship the tree. In Sikhism's Sukhmani Sahib the tree is mentioned "PaarJaat Eh Har Ko Naam The name of Lord is the mythological tree"</p>
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas12" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Krishna Tulasi Plant</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Tulsi is cultivated for religious and traditional medicine purposes, and also for its essential oil. It is widely used as a herbal tea, commonly used in Ayurveda, and has a place within the Vaishnava tradition of Hinduism, in which devotees perform worship involving holy basil plants or leaves. 
+
+<p>Ocimum tenuiflorum, commonly known as holy basil, tulsi or tulasi, and tamole, damole, or domole in Fiji, is an aromatic perennial plant in the family Lamiaceae. It is native to tropical and subtropical regions of Australia, Malesia, Asia, and the western Pacific. It is widely cultivated throughout the Southeast Asian tropics. This plant has escaped from cultivation and has naturalized in many tropical regions of the Americas. It is an agricultural and environmental weed.</p>
+<h6>Morphology</h6>
+<p>
+Holy basil is an erect, many-branched subshrub, 30–60 cm (12–24 in) tall with hairy stems. Leaves are green or purple; they are simple, petioled, with an ovate blade up to 5 cm (2 in) long, which usually has a slightly toothed margin; they are strongly scented and have a decussate phyllotaxy. The purplish flowers are placed in close whorls on elongated racemes.
+The three main morphotypes cultivated in India and Nepal are Ram tulsi (the most common type, with broad bright green leaves that are slightly sweet), the less common purplish green-leaved (Krishna or Shyam tulsi) and the common wild vana tulsi (e.g., Ocimum gratissimum).</p>
+
+<h6>phytochemicals</h6>
+<p>The plant and its oil contain diverse phytochemicals, including tannins, flavonoids, eugenol, caryophyllenes, carvacrol, linalool, camphor, and cinnamyl acetate, among others.[9][10] One study reported that the plant contains an eponymous family of 10 neolignan compounds called tulsinol A-J</p>
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas13" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Clitoria Ternatea, Gokarna (Blue) - Plant </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body"> its scientific name is Clitoria ternatea, commonly known as Asian pigeonwings,[1] bluebellvine, blue pea, butterfly pea, cordofan pea or Darwin pea,[2] is a plant species belonging to the family Fabaceae, endemic and native to the Indonesian island of Ternate.[3]: 215 
+
+<p>In India, it is revered as a holy flower, used in daily puja rituals.</p>
+<h6>Etymology</h6>
+<p>The genus name Clitoria is a direct translation from the local name of these plants in the Ternate language, Telang, which literally means "clitoris", due to their blossoms' shape that resembles the shape of human female genitals. The first reference to the genus, which includes an illustration of the plant, was made in 1678 by Jakób Breyne, a Polish naturalist, who described it as Flos clitoridis ternatensibus, meaning 'Ternatean flower of the clitoris'.[4][5] The species name is derived from the name of the island where Botanist Carl Linnaeus's specimens originated from: the Ternate Island, located in the northern part of the Maluku Islands.</p> 
+    
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas14" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Curry Leaves, Kadi Patta, Murraya koenigii, Meetha Neem - Plant </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">The curry tree, Murraya koenigii or Bergera koenigii, is a tropical and sub-tropical tree in the family Rutaceae (the rue family, which includes rue, citrus, and satinwood), native to Asia.[4] The plant is also sometimes called sweet neem, though M. koenigii is in a different family to neem, Azadirachta indica, which is in the related family Meliaceae.
+
+<p>Its leaves, known as curry leaves, are used in many dishes in the Indian subcontinent.</p>
+<p>It is a small tree, growing 4–6 metres (13–20 ft)) tall, with a trunk up to 40 cm (16 in) in diameter. The aromatic leaves are pinnate, with 11–21 leaflets, each leaflet 2–4 cm (3⁄4–1+1⁄2 in) long and 1–2 cm (1⁄2–3⁄4 in) broad. The plant produces small white flowers which can self-pollinate to produce small shiny-black drupes containing a single, large viable seed. The berry pulp is edible, with a sweet flavor.</p>
+<h6>Etymology</h6>
+<p>The word curry derives from Tamil word kari, the name of the plant associated with the perceived blackness of the tree leaves.[8] The records of the leaves being utilized are found in Tamil literature dating back to the 1st and 4th centuries CE. British had spice trades with the ancient Tamil region. It was introduced to English in the late 16th century. </p> 
+    
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas15" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">rose plant</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">The name rose comes from Latin rosa, which was perhaps borrowed from Oscan, from Greek ῥόδον rhódon (Aeolic βρόδον wródon), itself borrowed from Old Persian wrd- (wurdi), related to Avestan varəδa, Sogdian ward, Parthian wâr.
+<p>The leaves are borne alternately on the stem. In most species they are 5 to 15 centimetres (2.0 to 5.9 in) long, pinnate, with (3–) 5–9 (–13) leaflets and basal stipules; the leaflets usually have a serrated margin, and often a few small prickles on the underside of the stem. Most roses are deciduous but a few (particularly from Southeast Asia) are evergreen or nearly so. </p>
+<p>The flowers of most species have five petals, with the exception of Rosa omeiensis and Rosa sericea, which usually have only four. Each petal is divided into two distinct lobes and is usually white or pink, though in a few species yellow or red. Beneath the petals are five sepals (or in the case of some Rosa omeiensis and Rosa sericea, four). These may be long enough to be visible when viewed from above and appear as green points alternating with the rounded petals. There are multiple superior ovaries that develop into achenes.Roses are insect-pollinated in nature. </p>
+    
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas16" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Orange Fruit</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">An orange is a fruit of various citrus species in the family Rutaceae (see list of plants known as orange); it primarily refers to Citrus × sinensis, which is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. The sweet orange reproduces asexually (apomixis through nucellar embryony); varieties of the sweet orange arise through mutations.
+<p>The orange originated in a region encompassing Southern China, Northeast India, and Myanmar,[8][9] and the earliest mention of the sweet orange was in Chinese literature in 314 BC.[2] As of 1987, orange trees were found to be the most cultivated fruit tree in the world.[10] Orange trees are widely grown in tropical and subtropical climates for their sweet fruit. The fruit of the orange tree can be eaten fresh, or processed for its juice or fragrant peel.[11] As of 2012, sweet oranges accounted for approximately 70% of citrus production.</p>
+<h6>History</h6>
+<p>The sweet orange is not a wild fruit, having arisen in domestication from a cross between a non-pure mandarin orange and a hybrid pomelo that had a substantial mandarin component. Since its chloroplast DNA is that of pomelo, it was likely the hybrid pomelo, perhaps a BC1 pomelo backcross, that was the maternal parent of the first orange. Based on genomic analysis, the relative proportions of the ancestral species in the sweet orange are approximately 42% pomelo and 58% mandarin. All varieties of the sweet orange descend from this prototype cross, differing only by mutations selected for during agricultural propagation. Sweet oranges have a distinct origin from the bitter orange, which arose independently, perhaps in the wild, from a cross between pure mandarin and pomelo parents. The earliest mention of the sweet orange in Chinese literature dates from 314 BC.</p>
+    
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas33" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Ajuga </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Ajuga also known as bugleweed, ground pine, carpet bugle, or just bugle, is a genus of flowering plants in the Ajugeae tribe of the mint family Lamiaceae. There are over 60 species of annual or perennial, mostly herbaceous plants. They are native to Europe, Asia, Africa, and Australia.
+<p>They grow to 5–50 cm (2-20 in) tall, with opposite leaves</p>
+    
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas34" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Caladium  </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Caladium /kəˈleɪdiəm/ is a genus of flowering plants in the family Araceae. They are often known by the common name elephant ear (which they share with the closely related genera Alocasia, Colocasia, and Xanthosoma), heart of Jesus, and angel wings. There are over 1000 named cultivars of Caladium bicolor from the original South American plant.<br>
+<p>The genus Caladium includes seven species that are native to South America and Central America, and naturalized in India, parts of Africa, and various tropical islands.[1] They grow in open areas of the forest and on the banks of rivers and go dormant during the dry season. The wild plants grow to 15–35 inches (40–90 cm) tall, with leaves mostly 6-18 inches (15–45 cm) long and broad.</p>
+    
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas35" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">First Frost Hosta  </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Prized for its foliage which remains attractive until first frost, 'First Frost' (Plantain Lily) is a lovely addition to shady areas. It forms attractive, dense mounds of upright, heart-shaped blue-green leaves, 7in. long (17 cm), with wide gold margins in spring, gradually maturing to creamy-white.
+
+    
+  </div>
+</div>
+
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas36" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Desert Rose  </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">The desert rose (Adenium obesum) is a slow-growing plant, only growing about 12 inches per year. Desert rose is often used as a bonsai plant thanks to its thick succulent trunk, thin and delicate leaves, and luscious, deep pink trumpeting flowers. It is native to Africa, the Middle East, and Madagascar.
+<br>
+<p>Try desert rose! This sun-loving plant is perfect for you if you don't want to water a lot and want a variety that looks different than the typical spiky, spiny succulents. Desert rose looks like a bonsai; it has a thick, swollen truck (that holds water during times of drought) and shiny, dark green leaves.</p>
+<br><p>This succulent provides bright flowers and while not in bloom it has interesting tight clusters of narrow, green leaves. However, there is an important consideration when growing this plant, particularly in the house. Its sap is poisonous and should never come into contact with children or pets.</p>
+
+    
+  </div>
+</div>
+
+
+<!--- offcanvas for airpurifying plants -->
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas17" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Mother In Law Tongue</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Dracaena trifasciata is commonly called "mother-in-law's tongue", "Saint George's sword" or "snake plant", because of the shape and sharp margins of its leaves that resemble snakes. It is also known as the "viper's bowstring hemp", because it is one of the sources for plant fibers used to make bowstrings.
+<p>It is an evergreen perennial plant forming dense strands, spreading by way of its creeping rhizome, which is sometimes above ground, sometimes underground. Its stiff leaves grow vertically from a basal rosette. Mature leaves are dark green with light gray-green cross-banding and usually range from 70–90 centimetres (2.3–3.0 ft) long and 5–6 centimetres (2.0–2.4 in) wide, though it can reach heights above 2 m (6 ft) in optimal conditions.</p>
+<p>The plant exchanges oxygen and carbon dioxide using the crassulacean acid metabolism process, which allows them to withstand drought. The microscopic pores on the plant's leaves, called the stomata and used to exchange gases, are opened only at night to prevent water from escaping via evaporation in the hot sun. It is a weed in some parts of northern Australia.</p>
+<h6>Features</h6>
+<p>This plant is often kept as a houseplant due to its non-demanding maintenance. They require very little water and sun, making them perfect for dark rooms and apartments. </p>
+    
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas18" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Dracaena</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Dracaena (/drəˈsiːnə/[2]) is a genus of about 120 species of trees and succulent shrubs.The formerly accepted genera Pleomele and Sansevieria are now included in Dracaena. In the APG IV classification system, it is placed in the family Asparagaceae,subfamily Nolinoideae (formerly the family Ruscaceae). It has also formerly been separated (sometimes with Cordyline) into the family Dracaenaceae or placed in the Agavaceae (now Agavoideae). 
+<p>Species of Dracaena have a secondary thickening meristem in their trunk, termed Dracaenoid thickening by some authors,[citation needed] which is quite different from the thickening meristem found in dicotyledonous plants. This characteristic is shared with members of the Agavoideae and Xanthorrhoeoideae among other members of the Asparagales</p>
+<p>Dracaena species can be classified in two growth types: treelike dracaenas (Dracaena fragrans, Dracaena draco, Dracaena cinnabari), which have aboveground stems that branch from nodes after flowering, or if the growth tip is severed, and rhizomatous dracaenas (Dracaena trifasciata, Dracaena angolensis), which have underground rhizomes and leaves on the surface (ranging from straplike to cylindrical).[citation needed]
+
+Many species of Dracaena are kept as houseplants due to tolerance of lower light and sparse watering. </p>
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas19" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Peace Lily</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Peace lily is a common indoor houseplant that is widely preferred, as it is easy to maintain and makes home interiors appealing with its attractive and glossy leaves. Moreover, the plant is also believed to bring good luck and positivity, according to Vastu Shastra.
+<p>The peace lily plant is well known for its air-purifying abilities as a houseplant; it's great at breaking down and neutralizing toxic gases like carbon monoxide and formaldehyde.</p>
+<p>Peace Lilies can live in low to bright, indirect sunlight. They're the perfect plant to bring life to a dark room or corner. Prolonged exposure to bright direct sunlight may burn and scorch their leaves and dry out their flowers.</p>
+  </div>
+</div>
+   
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas20" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Cast iron plant</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Aspidistra elatior, the cast-iron-plant or bar-room plant, also known in Japanese as haran or baran (葉蘭) is a species of flowering plant in the family Asparagaceae, native to Japan and Taiwan. Tolerant of neglect, it is widely cultivated as a houseplant, but can also be grown outside in shade where temperatures remain above −5 °C (23 °F). It is used as training material for the seika form of ikebana. 
+<p>Growing to 60 cm (24 in) tall and wide, it is an evergreen rhizomatous perennial, with glossy dark green leaves 30–50 cm (12–20 in) long, and fleshy, 8-lobed cream flowers with maroon colouring on the inner surface, borne in early summer.</p>
+  </div>
+</div>
+
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas21" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">English Ivy</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Hedera helix, the common ivy, English ivy, European ivy, or just ivy, is a species of flowering plant of the ivy genus in the family Araliaceae, native to most of Europe and western Asia. A rampant, clinging evergreen vine, it is a familiar sight in gardens, waste spaces, and wild areas, where it grows on walls, fences, tree trunks, etc. across its native and introduced habitats. As a result of its hardy nature, and its tendency to grow readily without human assistance, ivy attained popularity as an ornamental plant, but escaped plants have become naturalised outside its native range and grow unchecked in myriad wild and cultivated areas. 
+<p>Hedera helix is an evergreen climbing plant, growing to 20–30 m (66–98 ft) high where suitable surfaces (trees, cliffs, walls) are available, and also growing as groundcover where no vertical surfaces occur. It climbs by means of aerial rootlets with matted pads which cling strongly to the substrate. The ability to climb on surfaces varies with the plants variety and other factors: Hedera helix prefers non-reflective, darker and rough surfaces with near-neutral pH. It generally thrives in a wide range of soil pH with 6.5 being ideal, prefers moist, shady locations and avoids exposure to direct sunlight, the latter promoting drying out in winter</p>
+<h6>Leaves,Flowers and Fruits</h6>
+<p>The leaves are alternate, 50–100 mm (2–4 in) long, with a 15–20 mm (0.6–0.8 in) petiole; they are of two types, with palmately five-lobed juvenile leaves on creeping and climbing stems, and unlobed cordate adult leaves on fertile flowering stems exposed to full sun, usually high in the crowns of trees or the top of rock faces. </p>
+<p>The flowers are produced from late summer until late autumn, individually small, in 3-to-5 cm-diameter (1.2-to-2.0 in) umbels, greenish-yellow, and very rich in nectar, an important late autumn food source for bees and other insects. </p>
+<p>The fruit are purple-black to orange-yellow berries 6–8 mm (0.2–0.3 in) in diameter, ripening in late winter,[9] and are an important food source for many birds. </p>
+  </div>
+</div>
+
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas22" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Spider plant</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Chlorophytum comosum, usually called spider plant or common spider plant due to its spider-like look, also known as spider ivy, ribbon plant (a name it shares with Dracaena sanderiana), and hen and chickens is a species of evergreen perennial flowering plant of the family Asparagaceae. It is native to tropical and Southern Africa but has become naturalized in other parts of the world, including Western Australia and Bangladesh. Chlorophytum comosum is easy to grow as a houseplant because of its resilience, but it can be sensitive to the fluoride in tap water, which commonly gives it "burnt tips". Variegated forms are the most popular. 
+<p>Chlorophytum comosum grows to about 60 cm (24 in) tall, although as a hanging plant it can descend many feet. It has fleshy, tuberous roots, each about 5–10 cm (2–4 in) long. The long narrow leaves reach a length of 20–45 cm (8–18 in) and are around 6–25 millimetres (0.2–1.0 in) wide.</p>
+<h6>Flowers</h6>
+<p>Flowers are produced in a long, branched inflorescence, which can reach a length of up to 75 cm (30 in) and eventually bends downward to meet the earth. Flowers initially occur in clusters of 1–6 at intervals along the stem (scape) of the inflorescence. Each cluster is at the base of a bract, which ranges from 2–8 cm (0.8–3.1 in) in length, becoming smaller toward the end of the inflorescence. Most of the flowers that are produced initially die off, so that relatively, the inflorescences are sparsely flowered</p>
+  </div>
+</div>
+
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas23" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Aglaonema Plant</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Aglaonema is a genus of flowering plants in the arum family, Araceae. They are native to tropical and subtropical regions of Asia and New Guinea.They are known commonly as Chinese evergreens.
+<p>These are evergreen perennials with stems growing erect or decumbent and creeping. Stems that grow along the ground may root at the nodes. There is generally a crown of wide leaf blades which in wild species are often variegated with silver and green coloration. The inflorescence bears unisexual flowers in a spadix, with a short zone of female flowers near the base and a wider zone of male flowers nearer the tip. The fruit is a fleshy berry that ripens red. The fruit is a thin layer covering one large seed.</p>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas24" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Weeping pig</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Ficus benjamina, commonly known as weeping fig, benjamin fig or ficus tree, and often sold in stores as just ficus, is a species of flowering plant in the family Moraceae, native to Asia and Australia.It is the official tree of Bangkok. The species is also naturalized in the West Indies and in the states of Florida and Arizona in the United States.In its native range, its small fruit are favored by some birds.
+<h6>Allergic Reactions</h6>
+<p>The plant is a major source of indoor allergens, ranking as the third-most common cause of indoor allergies after dust and pets.[17] Common allergy symptoms include rhinoconjunctivitis and allergic asthma. Ficus plants can be of particular concern to latex allergy sufferers because of the latex in the plants and should not be kept in the environment of latex allergy sufferers.[17] In extreme cases, Ficus sap exposure can cause anaphylactic shock in latex allergy sufferers. The consumption of parts of plants leads to nausea, vomiting, and diarrhea. Exceptions are the edible fruits.[citation needed]
+
+Allergy to Ficus plants develops over time and from exposure. The allergy was first observed in occupational settings amongst workers who regularly handled the plants. A study of workers at four plant-leasing firms showed that 27% of the workers had developed antibodies in response to exposure to the plants</p>
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas25" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Snake Plant</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">By releasing oxygen and adding moisture to the air, snake plants can help lessen the impact of airborne allergens like dust and dander. Since poor indoor air quality has been linked to many health-related issues like allergies and asthma, this is a definite benefit.<br>
+<h6>Features</h6>
+<p>Snake plants have the power to protect a home while attracting good luck, money, and positive energy. If you do not place them in the right location, however, the plants will not be able to work their magic.</p>
+<p>According to Vastu Shastra, by planting a snake plant in the house, the progress of the family members starts. Planting this plant in the house is considered very auspicious and fruitful. Due to its positive effect, the way of money comes into the house increases.</p>
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas26" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Corn plant</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Dracaena fragrans, commonly known as corn plant, is a popular, durable, easy-to-grow indoor houseplant that is native to tropical Africa.
+<p>Corn plant tolerates full to low light, but performs best in light shade or indirect or filtered sunlight. Too much light will scorch the leaves. Water as needed to keep the potting soil evenly moist, as excessively dry soil causes the leaf tips to turn brown and dry</p>
+<p>n some Asian countries, the corn plant is said to be a symbol of luck. If the plant blooms at home, it means one will receive wealth and fortune. Corn plants purify the air as they remove toxins from the air. Corn plants thrive in bright yet indirect light</p>
+<p>Corn stalks are made into paper and wallboard; husks are used as filling material; cobs are used directly for fuel, to make charcoal, and in the preparation of industrial solvents. Corn husks also have a long history of use in the folk arts for objects such as woven amulets and corn-husk dolls</p><br>
+<h6>Benefits</h6>
+<p>Th Dracaena fragrans, also known as the Corn Plant, is a popular indoor plant for more than gardeners. In fact, the plant has wonderful 'cleansing' properties, able to remove toxins from the air, increase humidity and levels of cognitive function!</p>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas27" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Lemon Button Fern</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">The lemon button fern is a dwarf variety of the common Boston fern and goes by many names including button sword fern, erect sword fern, little-leaved sword fern, and fishbone fern.<br>
+<h6>How To Care</h6>
+<p>Make sure that this plant gets enough light (but not enough to burn the delicate leaves), stays consistently moist but not soggy, and sits in a room with some humidity. Keep reading for tips on how to accomplish all of these things, and you will be able to keep your Lemon Button Fern happy without too much hassle!</p>
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas28" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Dragon Plant</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Dracaena marginata, more commonly known as a dragon tree, is an attractive plant with green sword-like, red-edged leaves. Native to Madagascar, the eye-catching spiky tree is known as a great entry plant for household gardeners—it's easy to care for, drought-tolerant, and nearly indestructible. 
+<p>The slow-growing plant can be planted year-round and boasts tiny white flowers in the spring (though it rarely flowers indoors). This small tree will grow to about 20 feet in warm outdoor climates, but it is generally grown as a potted houseplant and kept pruned to 6 feet or less. Keep the dragon tree away from pets because it's toxic to animals if ingested</p>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas29" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Rubber Tree</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">A rubber tree plant is also known as a Ficus elastica. These large trees can grow up to 50 feet (15 m.) tall. When learning how to care for a rubber tree plant, there are a few key things to remember, but rubber plant care isn’t as difficult as one might think.
+
+Read more at Gardening Know How: How To Care For A Rubber Tree Plant https://www.gardeningknowhow.com/houseplants/rubber-tree/how-to-care-for-a-rubber-tree-plant.htm
+<br>
+<h6>Light</h6>
+<p>A rubber tree houseplant needs bright light but prefers indirect light that isn’t too hot. Some people recommend putting it near a window that has sheer curtains. This allows plenty of light, but hopefully not too much heat.</p>
+<h6>Water</h6>
+<p>The rubber tree plant also needs the right balance of water. During the growing season, it needs to be kept moist and watered at least once a week. It is also a good idea to wipe off the leaves of your rubber tree houseplant with a damp cloth or spritz them with water. If you water the rubber tree plant too much, it will signal you by the leaves turning yellow and brown and falling off.
+</p>
+
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas30" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Golden Pothos</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Epipremnum aureum is a species in the arum family Araceae, native to Mo'orea in the Society Islands of French Polynesia.The species is a popular houseplant in temperate regions but has also become naturalised in tropical and sub-tropical forests worldwide, including northern South Africa,Australia, Southeast Asia, South Asia, the Pacific Islands and the West Indies, where it has caused severe ecological damage in some cases
+<p>The plant has a number of common names including golden pothos, Ceylon creeper, hunter's robe, ivy arum, house plant, silver vine, Solomon Islands ivy, and taro vine. It is also called devil's vine or devil's ivy because it is almost impossible to kill and it stays green even when kept in the dark. It is sometimes mistakenly labeled as a Philodendron, Pothos or Scindapsus in plant stores. It is commonly known as a money plant in many parts of the Indian subcontinent. It rarely flowers without artificial hormone supplements; the last known spontaneous flowering in cultivation was reported in 1964.</p>
+<h6>History</h6>
+<p>This species has been assigned to a number of genera. In 1880 when it was first described, it was named Pothos aureus, which is in part why it is often commonly referred to as a "pothos". After a flower was observed in 1962, it was given the new name of Rhaphidophora aurea. However, after closer examination of the flower, researchers noticed its heightened similarity to Epipremnum pinnatum and synonymised it with that species. Only after closer observation of the entirety of the plant, including the leaves and growth patterns, did researchers again separate it from E. pinnatum, and classify it as E. aureum</p>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas31" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Philodendron</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Philodendron is a large genus of flowering plants in the family Araceae. As of September 2015, the World Checklist of Selected Plant Families accepted 489 species; other sources accept different numbers. Regardless of number of species, the genus is the second-largest member of the family Araceae, after genus Anthurium. Taxonomically, the genus Philodendron is still poorly known, with many undescribed species. Many are grown as ornamental and indoor plants. The name derives from the Greek words philo- 'love, affection' and dendron 'tree'. The generic name, Philodendron, is often used as the English name. 
+<p>Compared to other genera of the family Araceae, philodendrons have an extremely diverse array of growth methods. The habits of growth can be epiphytic, hemiepiphytic, or rarely terrestrial. Others can show a combination of these growth habits depending on the environment. Hemiepiphytic philodendrons can be classified into two types: primary and secondary hemiepiphytes. A primary hemiepiphytic philodendron starts life high up in the canopy where the seed initially sprouts. The plant then grows as an epiphyte. </p>
+<br>
+<p>Once it has reached a sufficient size and age, it will begin producing aerial roots that grow toward the forest floor. Once they reach the forest floor, nutrients can be obtained directly from the soil. In this manner, the plant's strategy is to obtain light early in its life at the expense of nutrients. Some primary epiphytic species have a symbiotic relationship with ants. In these species, the ants' nest is grown amongst the plant's roots, which help keep the nest together. Philodendrons have extrafloral nectaries, glands that secrete nectar to attract the ants. The philodendron, in turn, obtains nutrients from the surrounding ant nest, and the aggressive nature of the ants serves to protect the plant from other insects which would eat it.</p>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas32" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Sword Fern</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">Polystichum munitum, the western swordfern, is an evergreen perennial fern native to western North America, where it is one of the most abundant ferns in forested areas. It occurs along the Pacific coast from southeastern Alaska to southern California, and also inland east to southeastern British Columbia, northern Idaho and western Montana, with disjunctive populations in northern British Columbia, Canada; the Black Hills in South Dakota, United States; and Guadalupe Island off of Baja California, Mexico. Western swordfern is known to have locally naturalized in parts of Great Britain and Ireland.
+<p>The dark green fronds of this fern grow 50 to 180 centimetres (1.6 to 5.9 ft) tall, in a tight clump spreading out radially from a round base. They are single-pinnate, with the pinnae alternating on the stalk. Each pinna is 1 to 15 centimetres (0.39 to 5.91 in) long, with a small upward-pointing lobe (a sword hilt, hence the name) at the base, and the edges are serrated with bristly tips. Individual fronds live for 1.5 to 2.5 years and remain attached to the rhizome after withering. The round sori occupy two rows on either side of the midrib of each pinna and are covered by a centrally-attached, umbrella-like indusium with fringed edges. They produce light yellow spores. In deep shade, fronds spread nearly horizontally but with increasing sun exposure grow more upright.</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="login.js"></script>
+</body>
+</html>
